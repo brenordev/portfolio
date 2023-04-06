@@ -1,0 +1,28 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.btn{
+    @include flex-center;
+    padding: 8px;
+    color: $terciary-color-font;
+}
+
+.btn-curriculum{
+    gap: 12px;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    border-radius: 4px;
+    transition: all .5s ease;
+    // border-bottom: 2px solid $primary-color;
+
+
+    &:hover{
+        .FaDownload{
+            opacity: 1;
+        }
+    }
+}
+.FaDownload{
+    opacity: 1;
+    transition: all .5s ease;
+}
