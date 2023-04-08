@@ -9,17 +9,28 @@
     &--link{
         color: $terciary-color-font;
         font-size: $medium-font-secundary;
-        display: inline-flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         gap: 8px;
         border-bottom: 2px solid transparent;
         padding-bottom: 2px;
-        transition: all .5s ease;
+        transition: all .25s ease-in-out;
 
         &:hover{
             color: $primary-color;
             transform: translateY(-3px);
         }
     }
+    &--span-alt{
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        font-size: $small-font-terciary;
+        padding: 4px;
+        border-radius: 4px;
+        transition: display 1s ease 2s;
+    }
+
 }

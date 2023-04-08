@@ -4,5 +4,6 @@ export default function App() {
   return (
   <Header/>
   );
+  <main className='main'></main>
 }
 

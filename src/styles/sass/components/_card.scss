@@ -11,6 +11,17 @@
     transform: translateY(-30%);
     color: $primary-color-font;
 
+    @media  (max-width:425px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 60%;
+
+        &__info{
+           text-align: center;
+        }
+    }
+
     &__image-profile{
         width: 180px;
         height: 180px;
@@ -18,6 +29,7 @@
         overflow: hidden;  
         border: 4px solid $primary-color;   
         background-color: $black; 
+        box-shadow: 0 0 15px rgba($terciary-color, 1);
 
         img{
             width: 100%;
@@ -32,7 +44,8 @@
         justify-content: end;
         margin-left: 32px;
         font-size: $small-font-terciary;
-
+        
+        
         &--name{
             font-weight: 500;
             font-size: $medium-font-secundary;
@@ -42,6 +55,7 @@
         &--office{
             color: $terciary-color-font;
             margin-bottom: -2px;
+
         }
     }
 
@@ -51,5 +65,9 @@
         position: absolute;
         right: 2.5%;
         bottom: 0;
+
+        @media  (max-width:768px) {
+            display: none;
+        }
     }
 }

@@ -21,10 +21,21 @@ header{
 
     &__menu{
         display: flex;
-        gap: 32px;
-        
-        a{
-            color: white;
+        gap: 16px;
+
+        &--link{
+            position: relative;
+            color: $white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all .5s ease;
+ 
+            &:hover{
+                color: $primary-color;
+                background-color: rgba($terciary-color, .2);
+
+            }
         }
     }
 }
@@ -35,13 +46,26 @@ header{
     background-color: $white;
     font-size: $medium-font-primary;
     padding: 2px 0;
+    box-shadow: 0 0 4px $terciary-color;
     
     p{
         @include flex-center;
         gap: 8px;
     }
     .iconsTec{
-        // color: $primary-color;
         font-size: $medium-font-secundary;
+    }
+    .btnClose{
+        margin-left: 32px;
+        padding: 4px 12px;
+        background-color: rgba($terciary-color, .5);
+        cursor: pointer;
+        text-transform: uppercase;
+        color: $white;
+
+        &:hover{
+            background-color: $primary-color;
+        }
+
     }
 }
