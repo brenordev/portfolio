@@ -1,9 +1,11 @@
 // Imports abstract
 @use './abstract/variables';
 @use './abstract/mixins';
+@use './abstract/animation';
 
 // Imports base
 @use './base/base';
+@use './base/typography';
 
 // Imports components
 @use './components/header';
@@ -12,4 +14,6 @@
 @use './components/buttons';
 
 // Imports layout
+@use './layout/about';
+@use './layout/skills';
 

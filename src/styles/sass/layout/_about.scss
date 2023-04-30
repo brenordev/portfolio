@@ -1,0 +1,19 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/animation' as *;
+
+.about{
+    height: 80vh;
+    display: flex;
+    margin-top: 20rem;
+    animation: entrada .7s ease;
+    animation-timing-function: 2s;
+
+    span{
+        color: $secundary-color-font;
+        font-size: $medium-font-terciary;
+        text-align: center;
+        font-weight: 400;
+        color: $terciary-color-font;
+    }
+}

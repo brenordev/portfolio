@@ -1,4 +1,6 @@
+@use '../abstract/variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -10,9 +12,25 @@
     // border: 1px solid #ccc;
 }
 html {
-    // font-size: 62.5%;
+    font-size: 62.5%;
 }
 body{
     min-height: 100vh;
-    background-color: #151515;
+    background-color: #100f0f;
+
+    *::selection{
+        background-color: $primary-color;
+    }
+}
+section{
+    width: 100%;
+}
+.container{
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+.title{
+    width: 100%;
 }

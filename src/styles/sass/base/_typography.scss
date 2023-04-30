@@ -1,0 +1,25 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.title-section{
+    max-width: 100%;
+    font-size: 8.2rem;
+    text-transform: uppercase;
+    color: $dark-strong;
+    font-weight: bold;
+    margin: 5rem 0;
+
+    &::selection{
+        background-color: $secundary-color;
+    }
+
+
+        &:hover{
+            color: $primary-color;
+        }
+
+        @media screen and (max-width:768px){
+            font-size: 4.5rem;
+        }
+
+}

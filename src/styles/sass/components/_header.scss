@@ -1,12 +1,14 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
+@use '../abstract/animation' as *;
 header{
-    height: 16rem;
+    height: 24rem;
     border-bottom: 4px solid $primary-color;
     background-image: url('../../images/bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: entrada .7s ease;
 }
 .navigation{
     max-width: 1280px;
@@ -23,52 +25,45 @@ header{
         display: flex;
         gap: 16px;
 
+        @media (max-width:768px) {
+            display: none;
+        }
+
         &--link{
             position: relative;
             color: $white;
             padding: 4px 8px;
-            border-radius: 4px;
+            border-radius: 4px 4px 0 0px;
             font-weight: 500;
-            transition: all .5s ease;
- 
-            &:hover{
-                color: $primary-color;
-                background-color: rgba($terciary-color, .2);
+            padding: .8rem;
+            font-size: 1.6rem;
+            letter-spacing: .5px;
+            transition: all .3s ease;
 
+            &::after{
+                content: "";
+                width: 100%;
+                height: .3rem;
+                position: absolute;
+                left: 0;
+                bottom: 0px;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: all 0.3s ease;
+                background-color: $white;
+                
+            }
+            
+            &:hover{
+                color: $white;
+                background-color: rgba($terciary-color, .2);
+                
+                &::after{
+                    transform: scaleX(1);
+                    transform-origin: right;
+                    animation: afterAnimation .5s ease;
+                }
             }
         }
-    }
-}
-.message div{
-    position: absolute;
-    width: 100%;
-    @include flex-center;
-    background-color: $primary-color;
-    font-size: $medium-font-primary;
-    padding: 2px 0;
-    box-shadow: 0 0 4px $terciary-color;
-    
-    div{
-        background-color: red
-    }
-    p{
-        @include flex-center;
-        gap: 8px;
-    }
-    .iconsTec{
-        font-size: $medium-font-secundary;
-    }
-    .btnClose{
-        margin-left: 32px;
-        padding: 4px 12px;
-        background-color: rgba($terciary-color, .5);
-        cursor: pointer;
-        text-transform: uppercase;
-        color: $white;
-
-        &:hover{
-            background-color: $primary-color;
-        }
-
     }
 }
