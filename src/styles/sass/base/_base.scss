@@ -1,5 +1,5 @@
 @use '../abstract/variables' as *;
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display');
 
 *{
     margin: 0;
@@ -8,18 +8,22 @@
     text-decoration: none;
     outline: none;
     border: none;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     // border: 1px solid #ccc;
-}
+    -webkit-user-select:none;  
+    -moz-user-select:none;     
+    -ms-user-select:none;      
+    user-select:none;  }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body{
     min-height: 100vh;
     background-color: #100f0f;
 
     *::selection{
-        background-color: $primary-color;
+        background-color: none;
     }
 }
 section{
@@ -33,4 +37,8 @@ section{
 }
 .title{
     width: 100%;
+}
+.pointer{
+    color: $primary-color;
+    font-size: 2rem;
 }

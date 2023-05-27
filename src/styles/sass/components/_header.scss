@@ -39,6 +39,7 @@ header{
             font-size: 1.6rem;
             letter-spacing: .5px;
             transition: all .3s ease;
+            cursor: pointer;
 
             &::after{
                 content: "";
