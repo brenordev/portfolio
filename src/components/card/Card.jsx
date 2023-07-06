@@ -1,7 +1,8 @@
+// eslint-disable-next-line
 import '../../styles/css/styles.css';
 import Socials from '../socials/Socials';
 import{ FaCog, FaDownload} from "react-icons/fa"
-
+import React from 'react';
 function Card(){
 
     const name = 'Breno Ribeiro'
