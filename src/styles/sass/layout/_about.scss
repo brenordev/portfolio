@@ -2,17 +2,12 @@
 @use '../abstract/mixins' as *;
 @use '../abstract/animation' as *;
 
-.about{
-    height: 80vh;
-    display: flex;
-    margin-top: 20rem;
-    animation: entrada 3s ease;
-
-    span{
-        color: $secundary-color-font;
-        font-size: $medium-font-terciary;
-        text-align: center;
-        font-weight: 400;
+.about {
+    margin-top: 30rem;
+    span { 
         color: $terciary-color-font;
+        font-size: $medium-font-primary;    
+        font-weight: 300;
+
     }
 }

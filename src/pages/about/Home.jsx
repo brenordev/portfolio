@@ -1,9 +1,13 @@
 import '../../styles/css/styles.css'
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import React from 'react';
+
 export default function Home(){
     return (
         <section className="about" id='about'>
             <div className="container">
-                    <h2 className='title-section'>Sobre</h2>
+                    <SectionTitle title={'Sobre'}/>
+
                     <span>Formado em Análise e Desenvolvimento de Sistemas,
                         atualmente estudando JavaScript e aprimorando alguns
                         fundamentos para aplicar em uma oportunidade de trabalho

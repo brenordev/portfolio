@@ -1,7 +1,7 @@
 @use '../abstract/variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,32 +13,30 @@
     -webkit-user-select:none;  
     -moz-user-select:none;     
     -ms-user-select:none;      
-    user-select:none;  }
+    user-select:none;  
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     min-height: 100vh;
-    background-color: #100f0f;
+    background-color: #090909;
 
     *::selection{
         background-color: none;
     }
 }
-section{
+
+section {
     width: 100%;
 }
-.container{
+
+.container {
     max-width: 1280px;
     width: 100%;
     padding: 0 2%;
     margin: 0 auto;
-}
-.title{
-    width: 100%;
-}
-.pointer{
-    color: $primary-color;
-    font-size: 2rem;
 }

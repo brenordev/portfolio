@@ -7,7 +7,7 @@
     padding: 0 2%;
     display: flex;
     position: relative;
-    top: 65%;
+    top: 60%;
     transform: translateY(-30%);
 
     @media (max-width:425px) {
@@ -37,7 +37,6 @@
         align-items: left;
         justify-content: end;
         margin-left: 32px;
-        font-size: $small-font-terciary;
 
         @media (max-width:425px) {
             width: 100%;
@@ -48,15 +47,13 @@
         &--name {
             color: $primary-color-font;
             font-weight: 500;
-            font-size: $big-font-primary;
+            font-size: $medium-font-terciary;
         }
 
         &--office {
             letter-spacing: .3px;
-            font-size: $medium-font-secundary;
+            font-size: $small-font-terciary;
             color: $terciary-color-font;
-
-
         }
     }
 

@@ -1,12 +1,9 @@
+import React from 'react';
 import '../../src/images/bg.jpg'
 import Socials from './socials/Socials';
-import Card from './card/Card';
-import Logo from '../images/logosvg.svg'
-import React from 'react';
+import Logo from '../images/logo.svg'
 import { Link, animateScroll as scroll } from 'react-scroll';
-
-
-
+import Card from './card/Card';
 
 export default function Header() {
 
@@ -51,7 +48,7 @@ export default function Header() {
                     >Contato</Link>
                 </div>
             </nav>
-            <Card />
+            <Card/>
         </header>
 
     )

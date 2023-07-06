@@ -2,15 +2,16 @@ import '../../styles/css/styles.css';
 import Socials from '../socials/Socials';
 import{ FaCog, FaDownload} from "react-icons/fa"
 
-export default function Card(){
+function Card(){
 
-    const name = 'Breno Ribeiro';
-    const office = 'Desenvolvedor Front-End Jr'
+    const name = 'Breno Ribeiro'
+    const office = 'Desenvolvedor Front-End'
+    const imageUser = "https://github.com/brenordev.png"
 
     return (
         <div className='card'>
                 <div className='card__image-profile'>
-                    <img src='https://github.com/brenordev.png' alt='Foto'/>
+                    <img src={imageUser} alt='Foto'/>
                 </div>
                 <div className='card__info'>
                     <span className='card__info--name'>{name} <span>&#128075;</span></span>
@@ -24,3 +25,4 @@ export default function Card(){
         </div>
     )
 }
+export default Card;

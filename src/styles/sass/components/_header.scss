@@ -1,7 +1,8 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 @use '../abstract/animation' as *;
-header{
+
+header {
     height: 24rem;
     border-bottom: 4px solid $primary-color;
     background-image: url('../../images/bg.jpg');
@@ -9,8 +10,11 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     animation: entrada .7s ease;
+    animation: pulse infinite 2s;
+
 }
-.navigation{
+
+.navigation {
     max-width: 1280px;
     width: 100%;
     height: 5.5rem;
@@ -19,9 +23,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
 
-    &__menu{
+    &__menu {
         display: flex;
         gap: 16px;
 
@@ -29,19 +32,19 @@ header{
             display: none;
         }
 
-        &--link{
+        &--link {
             position: relative;
             color: $white;
-            padding: 4px 8px;
             border-radius: 4px 4px 0 0px;
-            font-weight: 500;
             padding: .8rem;
             font-size: 1.6rem;
             letter-spacing: .5px;
             transition: all .3s ease;
             cursor: pointer;
-
-            &::after{
+            transition-delay: .25s;
+            
+            
+            &::after {
                 content: "";
                 width: 100%;
                 height: .3rem;
@@ -52,14 +55,13 @@ header{
                 transform-origin: left;
                 transition: all 0.3s ease;
                 background-color: $white;
-                
             }
             
-            &:hover{
+            &:hover {
                 color: $white;
                 background-color: rgba($terciary-color, .2);
                 
-                &::after{
+                &::after {
                     transform: scaleX(1);
                     transform-origin: right;
                     animation: afterAnimation .5s ease;

@@ -1,16 +1,20 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
-.title-section {
+.section__title {
     max-width: 100%;
-    font-size: 7.2rem;
+    font-size: $small-font-primary;
     text-transform: uppercase;
     color: $dark-strong;
     font-weight: bold;
     margin: 5rem 0;
 
+    &--text {
+        color: red;
+    }
 
-    @media screen and (max-width:768px) {
+
+    @media screen and (max-width: 425px) {
         font-size: 3.2rem;
     }
 

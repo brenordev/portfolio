@@ -2,14 +2,14 @@
 @use '../abstract/mixins' as *;
 @use '../abstract/animation' as *;
 
-.btn{
+.btn {
     @include flex-center;
     padding: 8px;
     color: $terciary-color-font;
     overflow: hidden;
 }
 
-.btn-curriculum{
+.btn-curriculum {
     font-size: 1.6rem;
     gap: 12px;
     background-color: $primary-color;
@@ -18,31 +18,33 @@
     border: 2px solid transparent;
     transition: all .5s ease;
 
-    &:hover{
-
+    &:hover {
         border-color: $secundary-color;
         
-        .FaDownload{
+        .FaDownload {
             animation: downloadAnimation 1s ease infinite;
             opacity: 1;
         }
     }
 }
-.FaDownload{
+
+.FaDownload {
     opacity: 1;
     transition: all .5s ease;
 }
 
-.btn-config{
+.btn-config {
     border: 2px solid $dark-weak;
     border-radius: 2px;
     font-size: 1.6rem;
+    padding: 4px 12px;
 
-    &:hover{
+    &:hover {
+        // background-color: $white;
+        color: $primary-color;
 
         .FaCog{
             animation: animationRotate 1s ease;
         }
     }
-
 }

@@ -1,17 +1,18 @@
 @use '../abstract/variables' as *;
 
-.socials{
+.socials {
     display: inline-flex;
     justify-content: left;
     gap: 12px;
     margin-top: 8px;
-    @media (max-width:425px){
+
+    @media (max-width:425px) {
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
-    &--link{
+    &--link {
         color: $dark-weak;
         font-size: 2.2rem;
         display: flex;
@@ -21,12 +22,13 @@
         border-bottom: 2px solid transparent;
         transition: all .25s ease-in-out;
 
-        &:hover{
+        &:hover {
             color: $primary-color;
             transform: translateY(-3px);
         }
     }
-    &--span-alt{
+
+    &--span-alt {
         display: none;
         position: absolute;
         top: 0px;

@@ -61,7 +61,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: #100f0f;
+  background-color: #090909;
 }
 body *::selection {
   background-color: none;
@@ -78,25 +78,19 @@ section {
   margin: 0 auto;
 }
 
-.title {
-  width: 100%;
-}
-
-.pointer {
-  color: #FF6363;
-  font-size: 2rem;
-}
-
-.title-section {
+.section__title {
   max-width: 100%;
-  font-size: 7.2rem;
+  font-size: 1rem;
   text-transform: uppercase;
   color: #1F1F1F;
   font-weight: bold;
   margin: 5rem 0;
 }
-@media screen and (max-width: 768px) {
-  .title-section {
+.section__title--text {
+  color: red;
+}
+@media screen and (max-width: 425px) {
+  .section__title {
     font-size: 3.2rem;
   }
 }
@@ -109,6 +103,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   animation: entrada 0.7s ease;
+  animation: pulse infinite 2s;
 }
 
 .navigation {
@@ -120,7 +115,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
 }
 .navigation__menu {
   display: flex;
@@ -134,14 +128,13 @@ header {
 .navigation__menu--link {
   position: relative;
   color: #FFFFFF;
-  padding: 4px 8px;
   border-radius: 4px 4px 0 0px;
-  font-weight: 500;
   padding: 0.8rem;
   font-size: 1.6rem;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   cursor: pointer;
+  transition-delay: 0.25s;
 }
 .navigation__menu--link::after {
   content: "";
@@ -172,7 +165,7 @@ header {
   padding: 0 2%;
   display: flex;
   position: relative;
-  top: 65%;
+  top: 60%;
   transform: translateY(-30%);
 }
 @media (max-width: 425px) {
@@ -201,7 +194,6 @@ header {
   align-items: left;
   justify-content: end;
   margin-left: 32px;
-  font-size: 0.875rem;
 }
 @media (max-width: 425px) {
   .card__info {
@@ -213,11 +205,11 @@ header {
 .card__info--name {
   color: rgba(255, 255, 255, 0.96);
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .card__info--office {
   letter-spacing: 0.3px;
-  font-size: 1.375rem;
+  font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.45);
 }
 .card__others {
@@ -226,7 +218,7 @@ header {
   position: absolute;
   right: 2.5%;
   bottom: 0;
-  font-size: 1.375rem;
+  font-size: 1.8rem;
 }
 @media (max-width: 768px) {
   .card__others {
@@ -266,7 +258,7 @@ header {
   position: absolute;
   top: 0px;
   left: 0;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   padding: 4px;
   border-radius: 4px;
   transition: display 1s ease 2s;
@@ -307,27 +299,22 @@ header {
   border: 2px solid #404040;
   border-radius: 2px;
   font-size: 1.6rem;
+  padding: 4px 12px;
+}
+.btn-config:hover {
+  color: #FF6363;
 }
 .btn-config:hover .FaCog {
   animation: animationRotate 1s ease;
 }
 
 .about {
-  height: 80vh;
-  display: flex;
-  margin-top: 20rem;
-  animation: entrada 3s ease;
+  margin-top: 30rem;
 }
 .about span {
-  color: rgba(255, 255, 255, 0.67);
-  font-size: 1.75rem;
-  text-align: center;
-  font-weight: 400;
   color: rgba(255, 255, 255, 0.45);
-}
-
-.skills {
-  min-height: 60vh;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 
 .skills__container {
