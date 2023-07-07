@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../src/images/bg.jpg'
-import Socials from './socials/Socials';
 import Logo from '../images/logo.svg'
 import { Link, animateScroll as scroll } from 'react-scroll';
 import Card from './card/Card';
