@@ -3,8 +3,11 @@
 @use '../abstract/animation' as *;
 
 .about {
+    position: relative;
+
     margin-top: 30rem;
-    span { 
+
+    .container__info { 
         color: $terciary-color-font;
         font-size: $medium-font-primary;    
         font-weight: 300;

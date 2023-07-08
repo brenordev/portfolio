@@ -9,11 +9,7 @@
     outline: none;
     border: none;
     font-family: 'Poppins', sans-serif;
-    // border: 1px solid #ccc;
-    -webkit-user-select:none;  
-    -moz-user-select:none;     
-    -ms-user-select:none;      
-    user-select:none;  
+    // border: 1px solid red;
 }
 
 html {
@@ -23,20 +19,65 @@ html {
 
 body {
     min-height: 100vh;
-    background-color: #090909;
-
-    *::selection{
-        background-color: none;
-    }
+    background-color: $black;
 }
 
 section {
     width: 100%;
+
 }
 
 .container {
     max-width: 1280px;
-    width: 100%;
     padding: 0 2%;
     margin: 0 auto;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid $white;
+    background-color: $primary-color;
+    text-align: center;
+    font-size: 1.4rem;
+    color: $white;
+
+}
+
+.messagehome {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    padding: 4px 0;
+    background-color: $primary-color;
+    margin: 4.8rem 0;
+    position: relative;
+    color: $white;
+    font-size: $medium-font-primary;
+    border: 2px solid $white;
+
+    &__image{
+       
+        img {
+            max-width: 80px;
+            -webkit-filter: drop-shadow(5px 5px 5px $black);
+            filter: drop-shadow(5px 5px 5px $black);
+        }
+    }
+
+}
+
+.elipse-home {
+    width: 100px;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    transform: rotate(90deg);
+    display: none;
+
 }

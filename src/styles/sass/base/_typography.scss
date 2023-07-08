@@ -3,19 +3,15 @@
 
 .section__title {
     max-width: 100%;
-    font-size: $small-font-primary;
+    font-size: $big-font-terciary;
     text-transform: uppercase;
     color: $dark-strong;
     font-weight: bold;
-    margin: 5rem 0;
-
-    &--text {
-        color: red;
-    }
-
+    margin: 5rem 0;    
+    color: $dark-medium;
 
     @media screen and (max-width: 425px) {
-        font-size: 3.2rem;
+        font-size: 2rem;
     }
 
 }

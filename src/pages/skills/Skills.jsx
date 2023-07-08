@@ -1,44 +1,34 @@
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaSass, FaGitAlt, FaGithub, FaFigma } from 'react-icons/fa';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
+
+const mySkills = [
+    { skillTech: 'Html', icon: <FaHtml5 /> },
+    { skillTech: 'Css', icon: <FaCss3Alt /> },
+    { skillTech: 'JavaScript', icon: <FaJsSquare /> },
+    { skillTech: 'Scss/Sass', icon: <FaSass /> },
+    { skillTech: 'React', icon: <FaReact /> },
+    { skillTech: 'Git', icon: <FaGitAlt /> },
+    { skillTech: 'GitHub', icon: <FaGithub /> },
+    { skillTech: 'Figma', icon: <FaFigma /> }
+]
 
 export default function Skills() {
     return (
 
-        <section className="skills" id="skills">
-            <div className="container">
-                <SectionTitle title={'Conhecimentos'} />
-                <div className="skills__container">
-                    <div className="skills__container--card">
-                        <FaHtml5 className="skill__icon" />
+        <section className='skills' id='skills'>
+            <div className='container'>
+            <SectionTitle title={'Conhecimentos'} />
+            <div className='skills__container'>
+                {mySkills.map((skill, index) => {
+                    return (
+                    <div key={index} className='skill'>
+                            {skill.icon}
+                        <span className='skill__span'>{skill.skillTech}</span>
                     </div>
-                    <div className="skills__container--card">
-                        <FaCss3Alt className="skill__icon" />
-
-                    </div>
-                    <div className="skills__container--card">
-                        <FaJsSquare className="skill__icon" />
-
-                    </div>
-                    <div className="skills__container--card">
-                        <FaReact className="skill__icon" />
-
-                    </div>
-                    <div className="skills__container--card">
-                        <FaGitAlt className="skill__icon" />
-                    </div>
-                    <div className="skills__container--card">
-                        <FaGithub className="skill__icon" />
-
-                    </div>
-                    <div className="skills__container--card">
-                        <SiTailwindcss className="skill__icon" />
-
-                    </div>
-
-                </div>
-
+                    )
+                })}
+            </div>
             </div>
         </section>
     )

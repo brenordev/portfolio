@@ -1,11 +1,11 @@
 const projects = [
     {
         title: 'Weather App',
-        description: '',
+        description: 'O projeto "Weather App" é uma aplicação que fornece informações meteorológicas atualizadas para diferentes localidades.',
         langs: 'React - Sass',
         links: {
-            repository: '',
-            projectPreviw: ''
+            repository: 'https://github.com/brenordev/weather-app',
+            projectPreviw: 'https://weather.brenordev.online/'
         }
     }
 ]

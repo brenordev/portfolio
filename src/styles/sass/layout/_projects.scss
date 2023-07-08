@@ -1,6 +1,55 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
 
-.projects{
-    // height: 100vh;
+.projects {
+    max-width: 350px;
+}
+
+.project {
+    color: $terciary-color-font;
+    padding: 8px;
+    border-radius: 4px;
+
+    &__image {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+    &__title {
+        font-size: $medium-font-terciary;
+        color: $secundary-color;
+        border-bottom: 1px solid $terciary-color;
+        padding-bottom: 4px;
+    }
+
+    &__description {
+        font-size: $small-font-secundary;
+        padding: 4px 0;
+    }
+
+    &__langs {
+        font-size: $small-font-terciary;
+        color: $primary-color;
+        letter-spacing: 1px;
+        font-weight: 500;
+        padding-bottom: 4px;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 0;
+
+        .btn {
+            @include flex-center;
+            gap: 8px;
+            border: 1px solid $primary-color;
+            color: $white;
+            font-size: $small-font-terciary;
+            border-radius: 4px;
+        }
+    }
 }
