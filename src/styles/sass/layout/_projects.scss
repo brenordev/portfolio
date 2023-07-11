@@ -2,13 +2,23 @@
 @use '../abstract/mixins' as *;
 
 .projects {
-    max-width: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
 }
 
 .project {
+    max-width: 350px;
+    width: 100%;
+    min-height: 380px;
+    width: 100%;
     color: $terciary-color-font;
     padding: 8px;
-    border-radius: 4px;
+    cursor: default;
+    border-bottom: 2px solid $primary-color;
 
     &__image {
         width: 100%;
@@ -33,7 +43,7 @@
         font-size: $small-font-terciary;
         color: $primary-color;
         letter-spacing: 1px;
-        font-weight: 500;
+        font-weight: 300;
         padding-bottom: 4px;
     }
     &__buttons {
@@ -46,10 +56,16 @@
         .btn {
             @include flex-center;
             gap: 8px;
-            border: 1px solid $primary-color;
             color: $white;
+            font-weight: 500;
             font-size: $small-font-terciary;
             border-radius: 4px;
+            background-color: $primary-color;
+            transition: all .4s ease;
+
+            .icon {
+                font-size: $medium-font-secundary;
+            }
         }
     }
 }

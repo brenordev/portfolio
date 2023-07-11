@@ -7,6 +7,11 @@
     padding: 8px;
     color: $terciary-color-font;
     overflow: hidden;
+
+
+    &:hover {
+        background-color: $primary-color;
+    }
 }
 
 .btn-curriculum {
@@ -20,6 +25,7 @@
 
     &:hover {
         border-color: $secundary-color;
+        background-color: $white;
         
         .FaDownload {
             animation: downloadAnimation 1s ease infinite;

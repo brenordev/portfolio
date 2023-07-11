@@ -1,0 +1,21 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.footer {
+    background-color: $primary-color;
+    height: 8rem;
+    color: $white;
+    font-size: $small-font-secundary;
+
+    .container {
+        @include flex-between;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+
+    a {
+        color: $black;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+}

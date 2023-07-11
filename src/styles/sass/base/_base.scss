@@ -1,4 +1,6 @@
 @use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display');
 
 * {
@@ -24,6 +26,7 @@ body {
 
 section {
     width: 100%;
+    min-height: 100vh;
 
 }
 
@@ -47,21 +50,26 @@ section {
 }
 
 .messagehome {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+    @include flex-center;
     gap: 32px;
     flex-wrap: wrap;
     border-radius: 4px;
-    padding: 4px 0;
     background-color: $primary-color;
     margin: 4.8rem 0;
+    padding: 16px 0;
+    padding-right: 64px;
     position: relative;
     color: $white;
     font-size: $medium-font-primary;
     border: 2px solid $white;
+    // background-image: url("/src/images/bg_coffee.jpg");
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
 
     &__image{
+        position: absolute;
+        right: 0;
        
         img {
             max-width: 80px;

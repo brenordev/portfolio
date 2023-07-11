@@ -1,3 +1,4 @@
+import Footer from './components/Footer/Footer';
 import Header from './components/Header';
 import Message from './components/Message/Message';
 import Home from './pages/about/Home';
@@ -15,6 +16,7 @@ export default function App() {
       <Skills />
       <Projects/>
       <Contact/>
+      <Footer/>
     </main>
 
   );
